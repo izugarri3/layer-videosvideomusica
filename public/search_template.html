@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Videomúsica sección videos</title>
+    <meta name="title" content="Videomúsica, información y videos">
+    <meta name="Subject" content="Videomúsica, información y videos">
+    <meta name="description" content="Videomúsica, información y videos.">
+    <meta name="abstract" content="Videomúsica, información y videos">
+    <meta name="keywords" content="Videomúsica, videos ">
+    <meta name="robots" content="index,follow">
+    <meta http-equiv="content-Language" content="es">
+    <meta name="Revisit" content="15 days">
+    <meta name="Distribution" content="General">
+    <meta http-equiv="Pragma" content="cache">
+    <meta name="Author" content="Izugarria">
+    <!-- Mobile viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- CSS-->
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif%7CUbuntu" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/video.css">
+    <!-- end CSS-->
+    <!-- JS-->
+    <script src="js/libs/modernizr-2.6.2.min.js"></script>
+    <!-- end JS-->
+    
+      <style type="text/css">
+		.highlight { background: #CF0104; }
+		.searchheading { font-size: 120%; font-weight: bold; padding-top: 30px;}
+		.summary { font-size: 80%; font-style: italic; }
+		.suggestion { font-size: 100%; }
+		.results { font-size: 100%; }
+		.category { color: #999999; }
+		.sorting { text-align: right; }
+
+		.result_title { font-size: 100%; }		
+		.description { font-size: 100%; color: #54F048; }
+		.context { font-size: 100%; }
+		.infoline { font-size: 80%; font-style: normal; color: #8BD4E0;}
+
+		.zoom_searchform { font-size: 100%; }
+		.zoom_results_per_page { font-size: 80%; margin-left: 10px; }
+		.zoom_match { font-size: 80%; margin-left: 10px;}				
+		.zoom_categories { font-size: 80%; }
+		.zoom_categories ul { display: inline; margin: 0px; padding: 0px;}
+		.zoom_categories li { display: inline; margin-left: 15px; list-style-type: none; }
+		
+		.cat_summary ul { margin: 0px; padding: 0px; display: inline; }
+		.cat_summary li { display: inline; margin-left: 15px; list-style-type: none; }		
+		
+		input.zoom_button {  }
+		input.zoom_searchbox {  }		
+		
+		.result_image { float: left; display: block; }
+		.result_image img { margin: 10px; width: 80px; border: 0px; }
+
+		.result_block { margin-top: 15px; margin-bottom: 15px; clear: left; }
+		.result_altblock { margin-top: 15px; margin-bottom: 15px; clear: left; }
+		
+		.result_pages { font-size: 100%; }
+		.result_pagescount { font-size: 100%; }
+		
+		.searchtime { font-size: 80%; }
+		
+		.recommended 
+		{ 
+			background: #DFFFBF; 
+			border-top: 1px dotted #808080; 
+			border-bottom: 1px dotted #808080; 
+			margin-top: 15px; 
+			margin-bottom: 15px; 
+		}
+		.recommended_heading { float: right; font-weight: bold; }
+		.recommend_block { margin-top: 15px; margin-bottom: 15px; clear: left; }		
+		.recommend_title { font-size: 100%; }
+		.recommend_description { font-size: 100%; color: #008000; }
+		.recommend_infoline { font-size: 80%; font-style: normal; color: #808080;}
+		.recommend_image { float: left; display: block; }
+		.recommend_image img { margin: 10px; width: 80px; border: 0px; }
+	</style>
+  </head>
+  <body id="home">
+<header class="wrapper clearfix">
+<div id="banner" >
+          <img src="images/Logo1.png" alt="Video Música" title="Videos Música Sección videos">
+          <div style="font-size:30px; padding-left:30px; color:#00FFFF">Sección videos</div>
+      </div>
+    </header>
+    <!-- end header -->
+    <section id="hero" class="clearfix">
+
+      <center>
+        <h1>RESULTADO BÚSQUEDA</h1>
+      </center>
+      <div class="wrapper" style="background-color: #07010F; padding:10px; border-radius:18px; border:groove #3A4657">
+        <div onload="if (document.getElementById('zoom_searchbox')) {document.getElementById('zoom_searchbox').focus();}">
+          <!-- 
+	The ZOOMSEARCH tag below marks the place where your search form and search results	will be inserted when you run the search script. By default, you do not need to place a 	search form here, the search script will generate one and display it before the search 	results. 
+		There are other tags you can add to this page to show/remove different elements from	the search results. See "Advanced template options" in the Users Guide or Help file	for more information.
+	-->
+          <h3>Nueva búsqueda</h3>
+          <div style="font-size:12px; color:#1EE1D2"> "Introduce una o más palabras para buscar.<br>
+            Comodines como '*' y '?' son soportados.</div>
+          <!-- Begin HTML Searchbox Code -->
+          <form method="get" action="search.php" class="zoom_searchform"><input name="zoom_per_page" value="10" type="hidden"> <input name="zoom_and" value="0" type="hidden">
+            <input name="zoom_sort" value="0" type="hidden"> <input name="s" size="16" value="" id="zoom_searchbox" class="zoom_searchbox" type="text"> <button style="color: #fff; font-size:16px; font-weight: bold; border: #ffffff 2px solid; background-color: #4d90fe"
+              type="submit">Buscar</button>
+            <!-- End HTML Searchbox Code -->
+            <!--ZOOMSEARCH--> </form>
+        </div>
+      </div>
+        
+      <!-- end wrapper --> </section>
+<section id="content" class="wide-content">
+      
+      <div id="colophon" class="wrapper clearfix" style="text-align: center"> <a href="index.html">Videos inicio</a> | <a href="//www.videomusica.es">Videomúsica</a>
+      </div>
+      
+      <div id="copyright" class="wrapper clearfix" style="color:#fff; font-size:11px; line-height:1.4em; text-align: center">videomusica.es ® is a registered
+        trademark. All content © 2018 by izugarria.<br>
+        Todos los contenidos del portal incluyendo, a título enunciativo y sin carácter limitativo, fotografías, imágenes, dibujos, archivos de texto, audio, vídeo
+        y software, nombres, nombres comerciales, marcas, y logos, son propiedad de sus respectivos dueños.</div>
+    </section>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b1927e7341ca4b2d99892b7e087a77e6"}'></script><!-- End Cloudflare Web Analytics --><!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b1927e7341ca4b2d99892b7e087a77e6"}'></script><!-- End Cloudflare Web Analytics --><!-- Begin Cookie Consent plugin --> <script type="text/javascript"> window.cookieconsent_options = {"theme":"dark-bottom"}; </script> <script type="text/javascript" src="/libs/cookieconsent.min.js"></script> <!-- End Cookie Consent plugin -->
+  </body>
+</html>
