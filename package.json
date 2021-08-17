@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "name": "my-next-appvideosvideomusica",
+  "name": "layer-videosvideomusica",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
