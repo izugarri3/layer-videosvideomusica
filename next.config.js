@@ -9,5 +9,13 @@ const { withLayer0, withServiceWorker } = require('@layer0/next/config')
       // ...
       // additional Next.js config options here
       // ...
+      async rewrites() {
+    return [
+      {
+        source: '/index.html',
+        destination: '/',
+      },
+    ]
+  },
     })
   )
