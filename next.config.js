@@ -15,6 +15,10 @@ const { withLayer0, withServiceWorker } = require('@layer0/next/config')
         source: '/index.html',
         destination: '/',
       },
+{
+        source: '/pages/404.js',
+        destination: '/paginadeerror.html',
+      },
     ]
   },
     })
