@@ -53,6 +53,7 @@ stm_aix("p6i2","p1i0",[0,"G"]);
 stm_bpx("p9","p2",[]);
 stm_aix("p9i0","p2i0",[0,"George Benson","","",-1,-1,0,"george-benson.html"]);
 stm_aix("p9i1","p2i0",[0,"George Michael","","",-1,-1,0,"george-michael.html"]);
+stm_aix("p9i2","p2i0",[0,"Gladys Knight & the Pips","","",-1,-1,0,"gladys-knight.html"]);
 stm_ep();
 stm_aix("p6i3","p1i0",[0,"I"]);
 stm_bpx("p10","p2",[]);
