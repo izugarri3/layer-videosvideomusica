@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "_default": {
+      "link": "videosvideomusica"
+    },
+    "videosvideomusica": {
+      "applicationId": "stId8t43p8HNnPEZseyXTzNajLrf9Lc7BLjqCZCm"
+    }
+  }
+}
