@@ -133,6 +133,11 @@
 <priority>0.80</priority>
 </url>
 <url>
+<loc>https://videos.videomusica.es/elo.html</loc>
+<lastmod>2021-10-27T14:42:58+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
 <loc>https://videos.videomusica.es/elton-john.html</loc>
 <lastmod>2018-11-06T20:42:58+00:00</lastmod>
 <priority>0.80</priority>
@@ -415,6 +420,11 @@
 <url>
 <loc>https://videos.videomusica.es/terence-trent.html</loc>
 <lastmod>2018-10-16T14:42:54+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://videos.videomusica.es/thalia.html</loc>
+<lastmod>2021-10-27T14:42:54+00:00</lastmod>
 <priority>0.80</priority>
 </url>
 <url>
