@@ -14,6 +14,10 @@ module.exports = new Router()
     appShell('public/index.html')
   })
   
- 
+ // match other assets such as favicon, manifest.json, etc
+  .match('/:path*', ({ serveStatic, cache }) => {
+  
+   serveStatic('public/:path*')
+  })
   // send any unmatched request to serve the static index.html
   .fallback(({ serveStatic }) => serveStatic('public/index.html'))
