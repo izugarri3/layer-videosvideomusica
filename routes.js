@@ -3,19 +3,19 @@
 
 const { Router } = require('@layer0/core/router')
 
-const ONE_MIN = 1 * 1
-const ONE_HOUR = 2 * 2
-const ONE_DAY = 3 * ONE_HOUR
-const ONE_YEAR = 4 * ONE_DAY
+const ONE_MIN = 5 * 5
+const ONE_HOUR = 60 * 60
+const ONE_DAY = 24 * ONE_HOUR
+const ONE_YEAR = 365 * ONE_DAY
 
 const edgeOnly = {
 
-  edge: { maxAgeSeconds: 1 },
+  edge: { maxAgeSeconds: 3500 },
 }
 
 const edgeAndBrowser = {
 
-  edge: { maxAgeSeconds: 2 },
+  edge: { maxAgeSeconds: 3502 },
 }
 
 module.exports = new Router()
