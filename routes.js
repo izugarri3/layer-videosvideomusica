@@ -3,7 +3,7 @@
 
 import { Router } from '@layer0/core/router'
 
-export default new Router().static('dist', ({ cache }) => {
+export default new Router().static('public', ({ cache }) => {
   cache({
     edge: {
       maxAgeSeconds: 60 * 60 * 60 * 365,
