@@ -15,7 +15,7 @@ module.exports = new Router()
   })
   
  // match other assets such as favicon, manifest.json, etc
-  .match('/:path*', ({ serveStatic, cache }) => {
+  .match('/:path*', ({ serveStatic }) => {
   
    serveStatic('public/:path*')
   })
