@@ -3,20 +3,6 @@
 
 const { Router } = require('@layer0/core/router')
 
-const ONE_MIN = 5 * 5
-const ONE_HOUR = 60 * 60
-const ONE_DAY = 24 * ONE_HOUR
-const ONE_YEAR = 365 * ONE_DAY
-
-const edgeOnly = {
-
-  edge: { maxAgeSeconds: 3500 },
-}
-
-const edgeAndBrowser = {
-
-  edge: { maxAgeSeconds: 3502 },
-}
 
 module.exports = new Router()
   .prerender([{ path: '/' }])
