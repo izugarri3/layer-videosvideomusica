@@ -1,10 +1,10 @@
 {
   "applications": {
     "_default": {
-      "link": "videosvideomusica"
+      "link": "izugarri"
     },
-    "videosvideomusica": {
-      "applicationId": "stId8t43p8HNnPEZseyXTzNajLrf9Lc7BLjqCZCm"
+    "izugarri": {
+      "applicationId": "wByXvRPtZtg2nDhlDwMJdFxQ3u48m1BTlmJeNBGX"
     }
   }
 }
