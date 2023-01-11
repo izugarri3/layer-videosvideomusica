@@ -1,48 +1,36 @@
-import React, { Component } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { Metrics } from '@edgio/rum'
+import Router from '@edgio/rum/Router'
+import Navbar from './components/Navbar'
+import { Outlet } from 'react-router-dom'
+import { Fragment, useEffect } from 'react'
+import { install } from '@edgio/prefetch/window'
+import installDevtools from '@edgio/devtools/install'
 
-import { Route, Link, Switch, Redirect } from 'react-router-dom'
-
-import Home from './components/Home'
-import About from './components/About'
-import Messages from './components/Messages'
-
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <div className="menu">
-          <ul>
-            <li>
-              {' '}
-              <Link to="/">Home</Link>{' '}
-            </li>
-            <li>
-              {' '}
-              <Link to="/messages">Messages</Link>{' '}
-            </li>
-            <li>
-              {' '}
-              <Link to="/about">About</Link>{' '}
-            </li>
-          </ul>
-        </div>
-        <div className="App-intro">
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/messages" component={Messages} />
-            <Route path="/about" component={About} />
-            <Redirect to="/" />
-          </Switch>
-        </div>
-      </div>
-    )
-  }
+const App = () => {
+  useEffect(() => {
+    // As the whole output will be static folder, let's include cache misses, coming from S3
+    install({ includeCacheMisses: true })
+    // Enable devtools manually, instead of relying on defaults by Layer0
+    installDevtools()
+    // Implementing Real Time User Monitoring (Core Web Vitals)
+    // https://docs.layer0.co/guides/core_web_vitals#npm-or-yarn
+    new Metrics({
+      // Set this TOKEN as an environment variable at Layer0 Console
+      // More on creating env variables: https://docs.layer0.co/guides/environments#creating-environment-variables
+      token: '677853de-d66e-47ed-aa83-40f8e38922d5',
+      router: new Router()
+        .match('/', ({ setPageLabel }) => setPageLabel('home'))
+        .match('/commerce', ({ setPageLabel }) => setPageLabel('commerce'))
+        .match('/product/:id', ({ setPageLabel }) => setPageLabel('product/:id')),
+    }).collect()
+  }, [])
+  return (
+    <Fragment>
+      <Navbar />
+      <Outlet />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" />
+    </Fragment>
+  )
 }
 
 export default App
