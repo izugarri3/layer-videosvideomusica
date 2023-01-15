@@ -21,7 +21,10 @@ const handler = ({ cache, serveStatic }, cacheConfig, path) => {
 
 module.exports = new Router()
 
-
+.match('/en:path*', ({ serveStatic, cache }) => {
+  
+   serveStatic('public/en:path*')
+})
   
   // Path(s) that do not have a "." as well as "/" to serve the fallback page
   .get('/:path*/:file([^\\.]+|)', ({ appShell, cache }) => {
