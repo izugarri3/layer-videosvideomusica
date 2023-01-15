@@ -21,12 +21,13 @@ const handler = ({ cache, serveStatic }, cacheConfig, path) => {
 
 module.exports = new Router()
 
-  // Assets (Hashed and Cached on Edge and in the Browser)
-  .get('/css/:path*', res => handler(res, edgeAndBrowser, 'src/css/:path*')) 
-  .get('/js/:path*', res => handler(res, edgeAndBrowser, 'src/js/:path*')) 
+
   
   // Path(s) that do not have a "." as well as "/" to serve the fallback page
-  .get('/:path*/:file([^\\.]+|)', res => handler(res, edgeOnly, 'public/index.html')) 
+  .get('/:path*/:file([^\\.]+|)', ({ appShell, cache }) => {
+    cache(edgeOnly)
+    appShell('public/index.html')
+  }) 
   
   // All other paths to be served from the src directory
   .get('/:path*', res => handler(res, edgeOnly, 'public/:path*'))
