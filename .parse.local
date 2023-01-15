@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "_default": {
+      "link": "izugarri"
+    },
+    "izugarri": {
+      "applicationId": "wByXvRPtZtg2nDhlDwMJdFxQ3u48m1BTlmJeNBGX"
+    }
+  }
+}
