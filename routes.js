@@ -29,4 +29,4 @@ module.exports = new Router()
   .get('/:path*/:file([^\\.]+|)', res => handler(res, edgeOnly, 'src/index.html')) 
   
   // All other paths to be served from the src directory
-  .get('/:path*', res => handler(res, edgeOnly, 'src/:path*'))
+  .get('/:path*', res => handler(res, edgeOnly, 'public/:path*'))
