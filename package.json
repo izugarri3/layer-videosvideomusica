@@ -19,7 +19,7 @@
     "@edgio/prefetch": "^5.0.4",
     "@edgio/react": "^5.0.4",
     "@edgio/react-cra": "^5.0.4",
-    "@edgio/rum": "^5.0.8",
+    "@edgio/rum": "^7.0.0",
     "@heroicons/react": "^1.0.6",
     "autoprefixer": "^10.4.8",
     "classnames": "^2.3.1",
