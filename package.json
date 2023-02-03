@@ -16,7 +16,7 @@
     "@edgio/cli": "^5.0.4",
     "@edgio/core": "^5.0.4",
     "@edgio/devtools": "^5.0.4",
-    "@edgio/prefetch": "^5.0.4",
+    "@edgio/prefetch": "^5.1.3",
     "@edgio/react": "^5.0.4",
     "@edgio/react-cra": "^5.0.4",
     "@edgio/rum": "^5.0.8",
