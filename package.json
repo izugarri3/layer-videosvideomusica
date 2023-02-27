@@ -18,7 +18,7 @@
     "@edgio/devtools": "^5.0.4",
     "@edgio/prefetch": "^5.0.4",
     "@edgio/react": "^5.0.4",
-    "@edgio/react-cra": "^5.0.4",
+    "@edgio/react-cra": "^6.1.2",
     "@edgio/rum": "^5.0.8",
     "@heroicons/react": "^1.0.6",
     "autoprefixer": "^10.4.8",
