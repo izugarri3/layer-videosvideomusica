@@ -10,8 +10,8 @@ const edgeOnly = {
 }
 
 const edgeAndBrowser = {
-  browser: { maxAgeSeconds: ONE_YEAR },
-  edge: { maxAgeSeconds: ONE_YEAR },
+  browser: false,
+  edge: false,
 }
 
 const handler = ({ cache, serveStatic }, cacheConfig, path) => {
@@ -33,4 +33,5 @@ module.exports = new Router()
   }) 
   
   // All other paths to be served from the src directory
+ get('/Control/:path*', res => handler(res, edgeAndBrowser, 'public/Control/:path*'))
   .get('/:path*', res => handler(res, edgeOnly, 'public/:path*'))
