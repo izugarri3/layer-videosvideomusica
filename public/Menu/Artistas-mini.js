@@ -9,6 +9,7 @@ stm_aix("p2i1","p2i0",[0,"Abba","","",-1,-1,0,"Abba.html"]);
 stm_aix("p2i2","p2i0",[0,"AC/DC","","",-1,-1,0,"ac-dc.html"]);
 stm_aix("p2i3","p2i0",[0,"Al Green","","",-1,-1,0,"al-green.html"]);
 stm_aix("p2i4","p2i0",[0,"Al Jarreau","","",-1,-1,0,"al-jarreau.html"]);
+stm_aix("p2i5","p2i0",[0,"Albert Hammond","","",-1,-1,0,"albert-hammond.html"]);
 stm_aix("p2i5","p2i0",[0,"Amaral","","",-1,-1,0,"Amaral.html"]);
 stm_aix("p2i6","p2i0",[0,"Ana Belén","","",-1,-1,0,"ana-belen.html"]);
 stm_aix("p2i7","p2i0",[0,"Antonio Vega","","",-1,-1,0,"antonio-vega.html"]);
