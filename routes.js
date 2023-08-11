@@ -25,5 +25,11 @@ module.exports = new Router()
   // Path(s) that do not have a "." as well as "/" to serve the fallback page
   .get('/:path*/:file([^\\.]+|)', ({ appShell, cache }) => {
     cache(edgeOnly)
-    appShell('index.html')
+    appShell('/index.html')
   })
+
+// All other paths to be served from the src directory
+0%
+  .get('/Control/:path*', res => handler(res, edgeAndBrowser, '/Control/:path*'))
+56%
+  .get('/:path*', res => handler(res, edgeOnly, '/:path*'))
