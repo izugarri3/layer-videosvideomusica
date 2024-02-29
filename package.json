@@ -14,7 +14,7 @@
   "license": "ISC",
   "devDependencies": {
     "@edgio/cli": "^7.2.8",
-    "@edgio/core": "^7.2.8",
+    "@edgio/core": "^7.9.0",
     "@edgio/devtools": "^7.2.8",
     "@edgio/prefetch": "^7.2.8"
   },
