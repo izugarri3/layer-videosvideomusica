@@ -1,33 +1,46 @@
-// routes.js
+// This file was added by edgio init.
+// You should commit this file to source control.
 
-const { Router } = require('@edgio/core/router')
+import { Router, edgioRoutes } from '@edgio/core/router';
 
-const ONE_YEAR = 365 * 24 * 60 * 60
+export default new Router()
+  .use(edgioRoutes)
+  .match(':path', {
+    origin: {
+      set_origin: 'origin',
+    },
+  })
 
-const edgeOnly = {
-  browser: false,
-  edge: { maxAgeSeconds: ONE_YEAR },
-}
+  // caching stylesheets and scripts
+  .match('/:path*/:file.:ext(js|mjs|css)', {
+    headers: {
+      set_response_headers: {
+        'cache-control': 'public, max-age=86400',
+      },
+      remove_origin_response_headers: ['set-cookie'],
+    },
+    caching: {
+      ignore_origin_no_cache: [200],
+      bypass_client_cache: true,
+    },
+    origin: {
+      set_origin: 'origin',
+    },
+  })
 
-const edgeAndBrowser = {
-  browser: false,
-  edge: false,
-}
-
-const handler = ({ cache, serveStatic }, cacheConfig, path) => {
-  cache(cacheConfig)
-  serveStatic(path)
-}
-
-module.exports = new Router()
-
-  
-  // Path(s) that do not have a "." as well as "/" to serve the fallback page
-  .get('/:path*/:file([^\\.]+|)', ({ appShell, cache }) => {
-    cache(edgeOnly)
-    appShell('public/index.html')
-  }) 
-  
-  // All other paths to be served from the src directory
-  .get('/Control/:path*', res => handler(res, edgeAndBrowser, 'public/Control/:path*'))
-  .get('/:path*', res => handler(res, edgeOnly, 'public/:path*'))
+  // caching assets
+  .match('/:path*/:file.:ext(png|ico|svg|jpg|jpeg|gif|ttf|woff|otf)', {
+    headers: {
+      set_response_headers: {
+        'cache-control': 'public, max-age=86400',
+      },
+      remove_origin_response_headers: ['set-cookie'],
+    },
+    caching: {
+      ignore_origin_no_cache: [200],
+      bypass_client_cache: true,
+    },
+    origin: {
+      set_origin: 'origin',
+    },
+  });
